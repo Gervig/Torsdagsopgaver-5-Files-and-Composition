@@ -17,7 +17,7 @@ public class Main {
         rooms.add(r3);
         //  3.i
         Building b1 = new Building(rooms, 3, 4, false);
-        System.out.println("The total number of lamps in this building "+"are: "+countLampsInBuilding(b1));
+        System.out.println("The total number of lamps in this building are: "+countLampsInBuilding(b1));
         if (isNormal(b1))
             System.out.println("This building is normal");
         else
