@@ -17,14 +17,24 @@ public class Main {
         rooms.add(r3);
         //  3.i
         Building b1 = new Building(rooms, 3, 4, false);
-        System.out.println(countLampsInBuilding(b1));
-
+        System.out.println("The total number of lamps in this building "+"are: "+countLampsInBuilding(b1));
+        if (isNormal(b1))
+            System.out.println("This building is normal");
+        else
+            System.out.println("This building is not normal");
     }
-    static int countLampsInBuilding(Building b1){
+    static int countLampsInBuilding(Building b){
         int sum = 0;
-        for (Room room: b1.getRooms()){
+        for (Room room: b.getRooms()){
             sum += room.getNumberOfLamps();
         }
         return sum;
+    }
+    static boolean isNormal(Building b){
+        if (b.getNumberOfFloors() > b.getRooms().size()) {
+            return true;
+        } else{
+            return false;
+        }
     }
 }
