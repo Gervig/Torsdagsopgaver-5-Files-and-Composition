@@ -17,7 +17,7 @@ public class Cafe {
 
     //  2.c
     public void loadMenuData() {
-        File file = new File("C:\\Users\\gervi\\OneDrive\\Skrivebord\\Uddannelse\\Torsdagsopgaver-5 Files and Composition\\Torsdagsopgaver-5 Files and Composition\\src\\Task2\\coffees.txt");
+        File file = new File("src/Task2/coffees.txt");
         try {
             Scanner scan = new Scanner(file);
             while (scan.hasNextLine()){
@@ -29,7 +29,6 @@ public class Cafe {
         } catch (FileNotFoundException e) {
             System.out.println("File not found. Check path and filename");
             System.out.println("Current directory: " + System.getProperty("user.dir"));
-
         }
     }
     public void getCoffeMenu(){

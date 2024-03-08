@@ -6,7 +6,9 @@ public class Customer {
     private String lastName;
     private String userName;
     private int id;
-    static int counter;
+//    Hvis counter ikke er static, så bliver den sat til 0 hver gange
+//    constructoren bliver kaldt, så alle ID ville blive sat til 1
+    private static int counter;
     //  1.b
     // Constructor start
     Customer (String firstName, String lastName, String userName){
@@ -25,7 +27,7 @@ public class Customer {
         lastName = getLastName();
         userName = getUserName();
         id = getID();
-        String result = "Name: " + firstName + " " + lastName + "\n" + "Username: " +  userName + "\n" + "ID: "+ id;
+        String result = "Name: " + firstName + " " + lastName + "\n" + "Username: " +  userName + "\n" + "ID: "+ id + "\n";
     return result;
     }
     public String getFirstName(){
