@@ -21,8 +21,8 @@ public class Building {
     public List<Room> getRooms() {
         return this.rooms;
     }
-//    public void addRoom(Room room) {
-//        rooms.add(room);
+//    public void addRoom(Room r) {
+//        rooms.add(r);
 //    }
 
     public int getNumberOfBathrooms() {

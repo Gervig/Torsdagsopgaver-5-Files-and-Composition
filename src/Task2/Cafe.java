@@ -20,7 +20,9 @@ public class Cafe {
         File file = new File("src/Task2/coffees.txt");
         try {
             Scanner scan = new Scanner(file);
-            while (scan.hasNextLine()){
+            while (scan.hasNextLine()) {
+                // Gemmer det i en String, men er ikke nødvendigt,
+                // Kunne bare skrive coffeeMenu.add(scan.nextLine());
                 String data = scan.nextLine();
                 coffeeMenu.add(data);
             }
@@ -31,8 +33,9 @@ public class Cafe {
             System.out.println("Current directory: " + System.getProperty("user.dir"));
         }
     }
-    public void getCoffeMenu(){
+
+    public void getCoffeMenu() {
         for (String c : this.coffeeMenu)
             System.out.println(c);
-        }
+    }
 }
